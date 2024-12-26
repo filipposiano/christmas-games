@@ -3,7 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const costoCartellaInput = document.getElementById("costoCartella");
   const calcolaButton = document.getElementById("calcola");
   const totaleDaDividereElement = document.getElementById("totaleDaDividere");
-  const bicchieri = document.querySelectorAll(".bicchiere");
+  const bicchieri = document.querySelectorAll(".bicchiere:not([data-bicchiere='ambo'], [data-bicchiere='terno'], [data-bicchiere='quaterna'], [data-bicchiere='quintina'], [data-bicchiere='tombola'])");
+
+  const numCartelleTombolaInput = document.getElementById("numCartelleTombola");
+  const costoCartellaTombolaInput = document.getElementById("costoCartellaTombola");
+  const calcolaTombolaButton = document.getElementById("calcolaTombola");
+  const totaleDaDividereTombolaElement = document.getElementById("totaleDaDividereTombola");
+  const bicchieriTombola = document.querySelectorAll(".bicchiere[data-bicchiere='ambo'], .bicchiere[data-bicchiere='terno'], .bicchiere[data-bicchiere='quaterna'], .bicchiere[data-bicchiere='quintina'], .bicchiere[data-bicchiere='tombola']");
 
   // Funzione per arrotondare ai 10 centesimi più vicini
   const arrotonda10Centesimi = (valore) => Math.round(valore * 10) / 10;
@@ -63,6 +69,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Funzione per calcolare i premi della Tombola
+  const calcolaPremiTombola = () => {
+    const numCartelle = parseInt(numCartelleTombolaInput.value, 10) || 0;
+    const costoCartella = parseFloat(costoCartellaTombolaInput.value) || 0;
+    const totale = numCartelle * costoCartella;
+
+    console.log(`Totale Tombola: ${totale}`);
+
+    // Aggiorna il totale dei soldi che vanno divisi
+    totaleDaDividereTombolaElement.textContent = totale.toFixed(2);
+
+    // Verifica che la somma delle percentuali faccia 100%
+    let sommaPercentuali = 0;
+    bicchieriTombola.forEach((bicchiere) => {
+      const percentualeInput = bicchiere.querySelector(".percentuale");
+      const percentuale = parseFloat(percentualeInput.value) || 0;
+      sommaPercentuali += percentuale;
+    });
+
+    if (sommaPercentuali !== 100) {
+      alert("La somma delle percentuali deve essere 100%");
+      return;
+    }
+
+    // Calcola i premi
+    bicchieriTombola.forEach((bicchiere) => {
+      const tipo = bicchiere.getAttribute("data-bicchiere");
+      const percentualeInput = bicchiere.querySelector(".percentuale");
+      const percentuale = parseFloat(percentualeInput.value) / 100;
+      const ammontare = arrotonda10Centesimi(totale * percentuale);
+
+      console.log(`Bicchiere: ${tipo}, Percentuale: ${percentuale}, Ammontare: ${ammontare}`);
+
+      // Aggiorna il valore nel bicchiere
+      bicchiere.querySelector(".ammontare").textContent = ammontare.toFixed(2);
+    });
+  };
+
   // Funzione per azzerare un bicchiere
   const azzeraBicchiere = (bicchiere) => {
     bicchiere.querySelector(".ammontare").textContent = "0.00";
@@ -76,5 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Calcolare e aggiungere premi quando si clicca su "Calcola"
-  calcolaButton.addEventListener("click", calcolaPremi);
+  if (calcolaButton) {
+    calcolaButton.addEventListener("click", calcolaPremi);
+  }
+
+  if (calcolaTombolaButton) {
+    calcolaTombolaButton.addEventListener("click", calcolaPremiTombola);
+  }
 });

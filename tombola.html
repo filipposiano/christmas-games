@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/game-svgrepo-com.svg">
+  <title>Calcolatore Tombola</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Calcolatore Tombola</h1>
+  <div class="inputs">
+    <label>
+      Numero di Cartelle:
+      <input type="number" id="numCartelleTombola" value="10" max="10" min="0">
+    </label>
+    <label>
+      Costo per Cartella (€):
+      <input type="number" id="costoCartellaTombola" value="2">
+    </label>
+    <button id="calcolaTombola">Calcola Premi</button>
+  </div>
+
+  <div class="totale">
+    <h2>Totale da Dividere: € <span id="totaleDaDividereTombola">0</span></h2>
+  </div>
+
+  <div class="bicchieri">
+    <h2>Premi Tombola</h2>
+    <div class="bicchiere" data-bicchiere="ambo">
+      <h3>Ambo</h3>
+      <p>Premio: € <span class="ammontare">0</span></p>
+      <label>
+        Percentuale:
+        <input type="number" class="percentuale" value="10" min="0" max="100">
+      </label>
+    </div>
+    <div class="bicchiere" data-bicchiere="terno">
+      <h3>Terno</h3>
+      <p>Premio: € <span class="ammontare">0</span></p>
+      <label>
+        Percentuale:
+        <input type="number" class="percentuale" value="20" min="0" max="100">
+      </label>
+    </div>
+    <div class="bicchiere" data-bicchiere="quaterna">
+      <h3>Quaterna</h3>
+      <p>Premio: € <span class="ammontare">0</span></p>
+      <label>
+        Percentuale:
+        <input type="number" class="percentuale" value="20" min="0" max="100">
+      </label>
+    </div>
+    <div class="bicchiere" data-bicchiere="quintina">
+      <h3>Quintina</h3>
+      <p>Premio: € <span class="ammontare">0</span></p>
+      <label>
+        Percentuale:
+        <input type="number" class="percentuale" value="20" min="0" max="100">
+      </label>
+    </div>
+    <div class="bicchiere" data-bicchiere="tombola">
+      <h3>Tombola</h3>
+      <p>Premio: € <span class="ammontare">0</span></p>
+      <label>
+        Percentuale:
+        <input type="number" class="percentuale" value="30" min="0" max="100">
+      </label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
