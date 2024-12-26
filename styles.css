@@ -290,7 +290,8 @@ button:hover {
 
 .azzera-piccolo {
     padding: 5px 10px;
-    font-size: 14px;
+    font-size: 20px;
+    margin: 0 auto;
     background-color: #dc3545;
     color: white;
     border: none;
@@ -302,3 +303,8 @@ button:hover {
 .azzera-piccolo:hover {
     background-color: #c82333;
 }
+
+.fa-solid {
+    font-size: 25px;
+}
+
