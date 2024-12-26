@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funzione per aggiornare l'icona del bicchiere
   const aggiornaIconaBicchiere = (bicchiere) => {
     const ammontare = parseFloat(bicchiere.querySelector(".ammontare").textContent) || 0;
-    const azzeraButton = document.querySelector(`.azzera-piccolo[data-bicchiere='${bicchiere.getAttribute("data-bicchiere")}'] i`);
+    const azzeraButton = bicchiere.querySelector(".azzera i");
     if (ammontare === 0) {
       azzeraButton.classList.remove("fa-wine-glass");
       azzeraButton.classList.add("fa-wine-glass-empty");

@@ -9,9 +9,9 @@
   <script src="https://kit.fontawesome.com/ac404aceb0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- <button class="back-button" onclick="location.href='index.html'">
+  <button class="back-button" onclick="location.href='index.html'">
     <img src="img/back-icon.svg" alt="Back to Home">
-  </button> -->
+  </button>
   <h1>Calcolatore Sinco</h1>
   <div class="inputs">
     <label>
@@ -22,78 +22,73 @@
       Costo per Cartella (€):
       <input type="number" id="costoCartella" value="2">
     </label>
-    <h2>Totale da raccogliere: € <span id="totaleDaDividere">0</span></h2>
+    <h2>Totale: € <span id="totaleDaDividere">0</span></h2>
     <button id="calcola">Calcola Premi</button>
   </div>
-  <div class="azzeratori">
-    <h1>Stato bicchieri</h1>
-    <p>Clicca per azzerare</p>
-    <button class="azzera-piccolo" data-bicchiere="centro"><i class="fa-solid fa-wine-glass-empty"></i> Centro</button>
-    <button class="azzera-piccolo" data-bicchiere="angolo"><i class="fa-solid fa-wine-glass-empty"></i> Angolo</button>
-    <button class="azzera-piccolo" data-bicchiere="poker"><i class="fa-solid fa-wine-glass-empty"></i> Poker</button>
-    <button class="azzera-piccolo" data-bicchiere="rombo"><i class="fa-solid fa-wine-glass-empty"></i> Rombo</button>
-    <button class="azzera-piccolo" data-bicchiere="sinco"><i class="fa-solid fa-wine-glass-empty"></i> Sinco</button>
-  </div>
-
+ 
   <h2 class="titolo-h2">Premi nei Bicchieri</h2>
   <div class="bicchieri">
     <div class="bicchiere" data-bicchiere="centro">
-      <img src="img/centro.png" alt="" class="bicchiere-img">
-        <h3>Centro</h3>
-      <p>Accumulato: € <span class="ammontare">0</span></p>
-      <p>Per giro: € <span class="per-giro">0</span></p>
-      <label>
-        Percentuale:
-        <input type="number" class="percentuale" value="10" min="0" max="100">
-      </label>
-      <button class="azzera">Azzerare</button>
+      <figure><img src="img/centro.png" alt="" class="bicchiere-img"> <figcaption>Centro</figcaption></figure>
+      <div class="bicchiere-info">
+        <p>Accumulato: € <span class="ammontare">0</span></p>
+        <p>Per giro: € <span class="per-giro">0</span></p>
+        <label>
+          Percentuale:
+          <input type="number" class="percentuale" value="10" min="0" max="100">
+        </label>
+      </div>
+      <button class="azzera"><i class="fa-solid fa-wine-glass-empty"></i></button>
     </div>
     <div class="bicchiere" data-bicchiere="angolo">
-        <img src="img/angolo.png" alt="" class="bicchiere-img">
-      <h3>Angolo</h3>
-      <p>Accumulato: € <span class="ammontare">0</span></p>
-      <p>Per giro: € <span class="per-giro">0</span></p>
-      <label>
-        Percentuale:
-        <input type="number" class="percentuale" value="20" min="0" max="100">
-      </label>
-      <button class="azzera">Azzerare</button>
+      <figure><img src="img/angolo.png" alt="" class="bicchiere-img"> <figcaption>Angolo</figcaption></figure>
+      <div class="bicchiere-info">
+        <p>Accumulato: € <span class="ammontare">0</span></p>
+        <p>Per giro: € <span class="per-giro">0</span></p>
+        <label>
+          Percentuale:
+          <input type="number" class="percentuale" value="20" min="0" max="100">
+        </label>
+      </div>
+      <button class="azzera"><i class="fa-solid fa-wine-glass-empty"></i></button>
     </div>
     <div class="bicchiere" data-bicchiere="poker">
-        <img src="img/poker.png" alt="" class="bicchiere-img">
-      <h3>Poker</h3>
-      <p>Accumulato: € <span class="ammontare">0</span></p>
-      <p>Per giro: € <span class="per-giro">0</span></p>
-      <label>
-        Percentuale:
-        <input type="number" class="percentuale" value="20" min="0" max="100">
-      </label>
-      <button class="azzera">Azzerare</button>
+      <figure><img src="img/poker.png" alt="" class="bicchiere-img"> <figcaption>Poker</figcaption></figure>
+      <div class="bicchiere-info">
+        <p>Accumulato: € <span class="ammontare">0</span></p>
+        <p>Per giro: € <span class="per-giro">0</span></p>
+        <label>
+          Percentuale:
+          <input type="number" class="percentuale" value="20" min="0" max="100">
+        </label>
+      </div>
+      <button class="azzera"><i class="fa-solid fa-wine-glass-empty"></i></button>
     </div>
     <div class="bicchiere" data-bicchiere="rombo">
-        <img src="img/rombo.png" alt="" class="bicchiere-img">
-      <h3>Rombo</h3>
-      <p>Accumulato: € <span class="ammontare">0</span></p>
-      <p>Per giro: € <span class="per-giro">0</span></p>
-      <label>
-        Percentuale:
-        <input type="number" class="percentuale" value="20" min="0" max="100">
-      </label>
-      <button class="azzera">Azzerare</button>
+      <figure><img src="img/rombo.png" alt="" class="bicchiere-img"> <figcaption>Rombo</figcaption></figure>
+      <div class="bicchiere-info">
+        <p>Accumulato: € <span class="ammontare">0</span></p>
+        <p>Per giro: € <span class="per-giro">0</span></p>
+        <label>
+          Percentuale:
+          <input type="number" class="percentuale" value="20" min="0" max="100">
+        </label>
+      </div>
+      <button class="azzera"><i class="fa-solid fa-wine-glass-empty"></i></button>
     </div>
     <div class="bicchiere" data-bicchiere="sinco">
-        <img src="img/sinco.png" alt="" class="bicchiere-img">
-      <h3>Sinco</h3>
-      <p>Accumulato: € <span class="ammontare">0</span></p>
-      <p>Per giro: € <span class="per-giro">0</span></p>
-      <label>
-        Percentuale:
-        <input type="number" class="percentuale" value="30" min="0" max="100">
-      </label>
-      <button class="azzera">Azzerare</button>
+      <figure><img src="img/sinco.png" alt="" class="bicchiere-img"> <figcaption>Sinco</figcaption></figure>
+      <div class="bicchiere-info">
+        <p>Accumulato: € <span class="ammontare">0</span></p>
+        <p>Per giro: € <span class="per-giro">0</span></p>
+        <label>
+          Percentuale:
+          <input type="number" class="percentuale" value="30" min="0" max="100">
+        </label>
+      </div>
+      <button class="azzera"><i class="fa-solid fa-wine-glass-empty"></i></button>
     </div>
-  </div>
-
+</div>
   <script src="script.js"></script>
 </body>
 </html>
