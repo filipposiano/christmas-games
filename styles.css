@@ -170,3 +170,11 @@ button:hover {
     justify-content: center;
     text-align: center;
 }
+
+.game-icon {
+    max-width: 30px;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
