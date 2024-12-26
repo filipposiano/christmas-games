@@ -65,13 +65,13 @@ button:hover {
 .bicchieri {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
 }
 
 .titolo-h2 {
-    display: block;
-    text-align: center;
+    display: inline;
+    text-align: left;
 }
 
 .bicchiere {
@@ -79,7 +79,7 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
+    width: 100%;
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -156,6 +156,11 @@ button:hover {
     background-color: #c82333;
 }
 
+.azzera {
+    width: min-content;
+    height: 100%;
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .inputs {
@@ -165,7 +170,6 @@ button:hover {
 
     .bicchiere {
         width: 100%;
-        max-width: 300px;
     }
 
     .back-button {
@@ -202,6 +206,11 @@ button:hover {
         margin: 0 auto;
         padding: 5px;
     }
+
+    .azzera {
+        width: min-content;
+        height: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -214,13 +223,13 @@ button:hover {
     }
 
     button {
-        width: 100%;
+        width: 50%;
         padding: 10px;
     }
 
     .bicchiere {
         padding: 5px;
-        width: min-content;
+        width: 100%;
         height: min-content;
         display: flex;
     }
@@ -255,6 +264,11 @@ button:hover {
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+
+    .azzera {
+        width: min-content;
+        height: 100%;
     }
 }
 
@@ -292,10 +306,6 @@ button:hover {
     margin: 0 auto;
 }
 
-.azzera {
-    margin-top: 10px;
-    width: 100%;
-}
 
 .azzeratori {
     width: 100vw;
