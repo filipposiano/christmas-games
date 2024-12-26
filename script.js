@@ -14,6 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funzione per arrotondare ai 10 centesimi più vicini
   const arrotonda10Centesimi = (valore) => Math.round(valore * 10) / 10;
 
+  // Funzione per aggiornare l'icona del bicchiere
+  const aggiornaIconaBicchiere = (bicchiere) => {
+    const ammontare = parseFloat(bicchiere.querySelector(".ammontare").textContent) || 0;
+    const azzeraButton = document.querySelector(`.azzera-piccolo[data-bicchiere='${bicchiere.getAttribute("data-bicchiere")}'] i`);
+    if (ammontare === 0) {
+      azzeraButton.classList.remove("fa-wine-glass");
+      azzeraButton.classList.add("fa-wine-glass-empty");
+    } else {
+      azzeraButton.classList.remove("fa-wine-glass-empty");
+      azzeraButton.classList.add("fa-wine-glass");
+    }
+  };
+
   // Funzione per calcolare e aggiungere premi
   const calcolaPremi = () => {
     const numCartelle = parseInt(numCartelleInput.value, 10) || 0;
@@ -66,6 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
       totaleDistribuito += ammontare;
 
       console.log(`Nuovo Premio: ${nuovoPremio}, Totale Distribuito: ${totaleDistribuito}`);
+
+      // Aggiorna l'icona del bicchiere
+      aggiornaIconaBicchiere(bicchiere);
     });
   };
 
@@ -104,12 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Aggiorna il valore nel bicchiere
       bicchiere.querySelector(".ammontare").textContent = ammontare.toFixed(2);
+
+      // Aggiorna l'icona del bicchiere
+      aggiornaIconaBicchiere(bicchiere);
     });
   };
 
   // Funzione per azzerare un bicchiere
   const azzeraBicchiere = (bicchiere) => {
     bicchiere.querySelector(".ammontare").textContent = "0.00";
+    // Aggiorna l'icona del bicchiere
+    aggiornaIconaBicchiere(bicchiere);
   };
 
   // Aggiungere listener ai pulsanti "Azzerare"

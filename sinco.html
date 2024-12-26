@@ -6,6 +6,7 @@
   <link rel="icon" href="img/cubes-svgrepo-com.svg">
   <title>Calcolatore Sinco</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/ac404aceb0.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <button class="back-button" onclick="location.href='index.html'">
@@ -21,22 +22,21 @@
       Costo per Cartella (€):
       <input type="number" id="costoCartella" value="2">
     </label>
+    <h2>Totale da raccogliere: € <span id="totaleDaDividere">0</span></h2>
     <button id="calcola">Calcola Premi</button>
   </div>
-
-  <div class="totale">
-    <h2>Totale da Dividere: € <span id="totaleDaDividere">0</span></h2>
-  </div>
   <div class="azzeratori">
-    <button class="azzera-piccolo" data-bicchiere="centro">Centro</button>
-    <button class="azzera-piccolo" data-bicchiere="angolo">Angolo</button>
-    <button class="azzera-piccolo" data-bicchiere="poker">Poker</button>
-    <button class="azzera-piccolo" data-bicchiere="rombo">Rombo</button>
-    <button class="azzera-piccolo" data-bicchiere="sinco">Sinco</button>
+    <h1>Stato bicchieri</h1>
+    <p>Clicca per azzerare</p>
+    <button class="azzera-piccolo" data-bicchiere="centro"><i class="fa-solid fa-wine-glass-empty"></i> Centro</button>
+    <button class="azzera-piccolo" data-bicchiere="angolo"><i class="fa-solid fa-wine-glass-empty"></i> Angolo</button>
+    <button class="azzera-piccolo" data-bicchiere="poker"><i class="fa-solid fa-wine-glass-empty"></i> Poker</button>
+    <button class="azzera-piccolo" data-bicchiere="rombo"><i class="fa-solid fa-wine-glass-empty"></i> Rombo</button>
+    <button class="azzera-piccolo" data-bicchiere="sinco"><i class="fa-solid fa-wine-glass-empty"></i> Sinco</button>
   </div>
 
+  <h2 class="titolo-h2">Premi nei Bicchieri</h2>
   <div class="bicchieri">
-    <h2>Premi nei Bicchieri</h2>
     <div class="bicchiere" data-bicchiere="centro">
       <img src="img/centro.png" alt="" class="bicchiere-img">
         <h3>Centro</h3>
