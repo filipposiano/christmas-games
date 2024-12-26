@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
+    align-items: center;
 }
 
 h1 {
@@ -352,4 +353,15 @@ label {
 
 figcaption {
     text-align: center;
+}
+
+input#costoCartella {
+    width: 50px;
+}
+
+.totaleDaDividere {
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
 }
