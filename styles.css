@@ -254,3 +254,8 @@ button:hover {
     height: 100px;
     margin: 0 auto;
 }
+
+.azzera {
+    margin-top: 10px;
+    width: 100%;
+}
