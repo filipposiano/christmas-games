@@ -187,6 +187,7 @@ button:hover {
     .back-button {
         top: 10px;
         left: 10px;
+        display: block;
     }
 
     h1 {
