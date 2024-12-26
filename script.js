@@ -119,6 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Aggiungere listener ai piccoli pulsanti "Azzerare"
+  const azzeraPiccoloButtons = document.querySelectorAll(".azzera-piccolo");
+  azzeraPiccoloButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const bicchiere = document.querySelector(`.bicchiere[data-bicchiere='${button.getAttribute("data-bicchiere")}']`);
+      azzeraBicchiere(bicchiere);
+    });
+  });
+
   // Calcolare e aggiungere premi quando si clicca su "Calcola"
   if (calcolaButton) {
     calcolaButton.addEventListener("click", calcolaPremi);

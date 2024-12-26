@@ -259,3 +259,25 @@ button:hover {
     margin-top: 10px;
     width: 100%;
 }
+
+.azzeratori {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.azzera-piccolo {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.azzera-piccolo:hover {
+    background-color: #c82333;
+}
