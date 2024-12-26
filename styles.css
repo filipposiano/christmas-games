@@ -19,6 +19,7 @@ h1 {
     justify-content: center;
     gap: 20px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 label {
@@ -98,4 +99,40 @@ button:hover {
 
 .bicchiere button:hover {
     background-color: #c82333;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bicchiere {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+
+    .inputs {
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .bicchiere {
+        padding: 15px;
+    }
+
+    .bicchiere p {
+        font-size: 16px;
+    }
 }
