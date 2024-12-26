@@ -53,6 +53,10 @@ button:hover {
     background-color: #0056b3;
 }
 
+.azzeratori h1 {
+    margin: 0;
+}
+
 
 .totale {
     text-align: center;
@@ -71,9 +75,7 @@ button:hover {
     text-align: center;
 }
 
-.azzeratori h1 {
-    display: inline-block;
-}
+
 
 .bicchiere {
     background: #ffffff;
@@ -229,6 +231,13 @@ button:hover {
         margin: 0 auto;
         padding: 5px;
     }
+
+    .azzeratori {
+        display: flex;
+        align-items: center;
+    flex-direction: column;
+
+    }
 }
 
 
@@ -272,6 +281,7 @@ button:hover {
 }
 
 .azzeratori {
+    width: 100vw;
     display: flex;
     justify-content: center;
     gap: 10px;
