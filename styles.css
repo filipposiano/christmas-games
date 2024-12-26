@@ -30,8 +30,8 @@ label {
 }
 
 input {
-    margin-top: 5px;
-    padding: 10px;
+    margin-top: 0px;
+    padding: 5px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -84,6 +84,7 @@ button:hover {
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: min-content;
 }
 
 .bicchiere:hover {
@@ -107,13 +108,15 @@ button:hover {
 
 .bicchiere p {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 0px 0;
     color: #333;
 }
 
 .bicchiere button {
     background-color: #dc3545;
     transition: background-color 0.3s ease;
+    margin: 5px 0;
+    height: 100px;
 }
 
 .bicchiere button:hover {
@@ -158,7 +161,6 @@ button:hover {
 
 .azzera {
     width: min-content;
-    height: 100%;
 }
 
 /* Media Queries for Responsive Design */
@@ -232,6 +234,7 @@ button:hover {
         width: 100%;
         height: min-content;
         display: flex;
+
     }
 
     .bicchiere p {
@@ -270,6 +273,10 @@ button:hover {
         width: min-content;
         height: 100%;
     }
+
+    button {
+        height: 100%;
+    }
 }
 
 /*Homepage buttons */
@@ -301,8 +308,8 @@ button:hover {
 }
 
 .bicchiere-img {
-    width: 80px;
-    height: 100px;
+    width: 60px;
+    height: 80px;
     margin: 0 auto;
 }
 
@@ -317,4 +324,15 @@ button:hover {
 
 .fa-solid {
     font-size: 25px;
+}
+
+.percentuale {
+    width: 20%;
+}
+
+label {
+    display: inline;
+    flex-direction: column;
+    font-size: 16px;
+    color: #555;
 }
